@@ -24,7 +24,7 @@ if (defined('APP_DB_ENCRYPT')) {
 }
 
 $db['default'] = array_merge([
-    'dsn'           => '', // Not Supported
+    'dsn'           => '', 
     'hostname'      => APP_DB_HOSTNAME,
     'port'          => APP_DB_PORT, 
     'username'     => APP_DB_USERNAME,
@@ -32,7 +32,7 @@ $db['default'] = array_merge([
     'database'     => APP_DB_NAME,
     'dbdriver'     => defined('APP_DB_DRIVER') ? APP_DB_DRIVER : 'mysqli',
     'dbprefix'     => db_prefix(),
-    'pconnect'     => false,
+    'pconnect'     => true,
     'db_debug'     => (ENVIRONMENT !== 'development'),  
     'cache_on'     => false,
     'cachedir'     => '',
