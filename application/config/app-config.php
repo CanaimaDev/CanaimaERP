@@ -32,33 +32,29 @@ define('APP_BASE_URL', 'http://localhost/perfex/');
 *
 * Auto added on install
 */
-define('APP_ENC_KEY', '47fc97ecf1f86cb51356ebe16cf850c2');
+define('APP_ENC_KEY', '596486665af1b0e13cb790bbc1bd22c1');
 
 /**
  * Database Credentials
  * The hostname of your database server
  */
-define('APP_DB_HOSTNAME', 'localhost');
+//define('APP_DB_HOSTNAME', 'perfex-db-do-user-19115536-0.l.db.ondigitalocean.com:25060');
+define('APP_DB_HOSTNAME', 'trolley.proxy.rlwy.net');
+define('APP_DB_PORT', '22145');
 /**
- * The port used to connect to the database
- */
-
- // define('APP_DB_PORT', '25060');
-
- /**
  * The username used to connect to the database
  */
 define('APP_DB_USERNAME', 'root');
 
 /**
- * The password used to connect to the database  --  AVNS_i6uiWe0CZHYVzhITCkV
+ * The password used to connect to the database
  */
-define('APP_DB_PASSWORD', '');
+define('APP_DB_PASSWORD', 'rPgyViSWXHHZSnnYEaBPlIgrdqXBIxkM');
 
 /**
  * The name of the database you want to connect to
  */
-define('APP_DB_NAME', 'perfex');
+define('APP_DB_NAME', 'railway');
 
 /**
  * @since  2.3.0

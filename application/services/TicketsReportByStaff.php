@@ -45,25 +45,25 @@ class TicketsReportByStaff
         $carbon = \Carbon\Carbon::now();
         switch ($mode) {
             case 'this_week':
-                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfWeek()->format('Y-m-d H:i:s') . '" and "' . $carbon->endOfWeek()->format('Y-m-d H:i:s') . '"';
+                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfWeek() . '" and "' . $carbon->endOfWeek() . '"';
                 break;
             case 'last_week':
                 $carbon->subWeek();
-                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfWeek()->format('Y-m-d H:i:s') . '" and "' . $carbon->endOfWeek()->format('Y-m-d H:i:s') . '"';
+                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfWeek() . '" and "' . $carbon->endOfWeek() . '"';
                 break;
             case 'this_month':
-                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfMonth()->format('Y-m-d H:i:s') . '" and "' . $carbon->endOfMonth()->format('Y-m-d H:i:s') . '"';
+                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfMonth() . '" and "' . $carbon->endOfMonth() . '"';
                 break;
             case 'last_month':
                 $carbon->subMonth();
-                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfMonth()->format('Y-m-d H:i:s') . '" and "' . $carbon->endOfMonth()->format('Y-m-d H:i:s') . '"';
+                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfMonth() . '" and "' . $carbon->endOfMonth() . '"';
                 break;
             case 'this_year':
-                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfYear()->format('Y-m-d H:i:s') . '" and "' . $carbon->endOfYear()->format('Y-m-d H:i:s') . '"';
+                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfYear() . '" and "' . $carbon->endOfYear() . '"';
                 break;
             case 'last_year':
                 $carbon->subYear();
-                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfYear()->format('Y-m-d H:i:s') . '" and "' . $carbon->endOfYear()->format('Y-m-d H:i:s') . '"';
+                $this->modeWhere = 'and ' . db_prefix() . 'tickets.date between "' . $carbon->startOfYear() . '" and "' . $carbon->endOfYear() . '"';
                 break;
             default:
                 throw new InvalidArgumentException("Invalid Mode Provided");
