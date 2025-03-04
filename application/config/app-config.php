@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 define('APP_BASE_URL', 'https://canaimashop.site');
+// define('APP_BASE_URL', 'http://localhost/perfex/');
+
 define('APP_ENC_KEY', '596486665af1b0e13cb790bbc1bd22c1');
 
 //define('APP_DB_HOSTNAME', 'perfex-db-do-user-19115536-0.l.db.ondigitalocean.com:25060');
